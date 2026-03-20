@@ -44,16 +44,9 @@ This portfolio is built using foundational web technologies:
 
 ## Projects
 
-### 1. Personal Portfolio Website
+### 1. Landing Page
 
--   **Description:** This is my digital resume, fully responsive and featuring animations to demonstrate my creative thinking and design skills.
--   **Technologies:** HTML, CSS, JavaScript
--   **Live Demo:** [https://codsoft-eta-five.vercel.app/](https://codsoft-eta-five.vercel.app/)
--   **GitHub Repository:** [https://github.com/Rachit0910d/CODSOFT.git](https://github.com/Rachit0910d/CODSOFT.git)
-
-### 2. Landing Page
-
--   **Description:** A landing page developed to test my design thinking. It was built without using any template, focusing on applying my knowledge directly. (Note: Currently not optimized for mobile and iPad screen views).
+-   **Description:** A landing page developed to test my design thinking. It was built without using any template, focusing on applying my knowledge directly. (Note: Optimized for mobile and iPad screen views).
 -   **Technologies:** HTML, CSS
 -   **Live Demo:** [https://codsoft-4py1.vercel.app/](https://codsoft-4py1.vercel.app/)
 -   **GitHub Repository:** [https://github.com/Rachit0910d/CODSOFT/tree/main/Landing-Page](https://github.com/Rachit0910d/CODSOFT/tree/main/Landing-Page)
