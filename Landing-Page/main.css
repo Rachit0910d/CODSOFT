@@ -1,8 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     font-family: roboto, arial;
     background-image: linear-gradient(45deg, rgb(50, 49, 49), rgb(255, 255, 255));
-    min-width: 1000px;
+    min-width: unset;
     left: 30px
 }
 
@@ -11,12 +15,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     border-bottom-width: 1px;
     background-color: rgba(255,255,255, 0.6);
     backdrop-filter: blur(60px);
     border-bottom-color: rgba(255, 255, 255, 0.6);
     border-bottom-style:solid;
-    min-width: 1500px;
+    min-width: unset;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     left: 0;
@@ -24,6 +29,34 @@ header{
     top: 0;
     z-index: 1000;
 }
+
+.hamburger-menu-icon {
+    display: none; /* Hidden by default on larger screens */
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 1001;
+}
+
+.mobile-nav-menu {
+    display: none; /* Hidden by default for desktop */
+}
+
+/* Desktop styles for navigation links */
+.middle-side-container{
+    display: flex;
+    justify-content: center; /* Center navigation links */
+    flex-grow: 1; /* Allow it to take available space */
+    gap: 23px;
+}
+
+/* Desktop styles for sign-in/get-started buttons */
+.right-side-container{
+    display: flex;
+    justify-content: space-around;
+    gap : 20px;
+}
+
 
 
 .left-side-container{
@@ -54,8 +87,7 @@ header{
 
 .middle-side-container{
     display: flex;
-    justify-content: space-evenly;
-    gap: 23px;
+    gap: 20px;
 }
 
 .navigation{
@@ -103,6 +135,7 @@ header{
 
 
 main{
+    margin-top: 70px; /* Added to account for fixed header */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,6 +245,90 @@ main{
     box-shadow: 0px 5px 10px rgba(0,0,0, 0.9);
 }
 
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+    
+  }
+  .middle-side-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .right-side-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  main {
+    flex-direction: column;
+    margin: 0 10px;
+    padding-top: 140px;
+  }
+  .left-side, .right-side {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .dashboard-picture {
+    width: 100%;
+    max-width: 100%;
+  }
+  .Headline {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .description {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
 
+/* ===== Tablets & small laptops (481px – 900px) ===== */
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+  .middle-side-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  main {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 140px;
+    margin: 0 20px;
+  }
+  .left-side, .right-side {
+    width: 100%;
+    text-align: center;
+  }
+  .Headline {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+  .dashboard-picture {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
+/* ===== Medium laptops (901px – 1200px) ===== */
+@media (max-width: 1200px) {
+  main {
+    gap: 20px;
+    margin: 0 20px;
+  }
+  .Headline {
+    font-size: 50px;
+  }
+  .dashboard-picture {
+    width: 100%;
+    max-width: 550px;
+  }
+}
 
