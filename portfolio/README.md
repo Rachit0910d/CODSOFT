@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-> 🔗 **Live Preview:** [codsoft-eta-five.vercel.app](https://codsoft-eta-five.vercel.app/) *(Design Reference)*
+> 🔗 **Live Preview:** [codsoft-eta-five.vercel.app](https://portfolio-rachitsaini.vercel.app/)
 
 Welcome to my personal portfolio! This project is a digital resume that showcases my technical skills, educational background, and featured projects as a MERN Stack Developer. 
 
