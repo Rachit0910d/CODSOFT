@@ -19,13 +19,12 @@ export function Projects() {
                 my skills in Creative Thinking and Cool Designing.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">HTML</span>
-                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">CSS</span>
-                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">Java Script</span>
+                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">ReactTS</span>
+                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">TailwindCSS</span>
               </div>
               <div className="flex gap-4">
-                <a href="https://codsoft-eta-five.vercel.app/" className="text-[#00d9ff] no-underline font-bold hover:underline">Live Demo →</a>
-                <a href="https://github.com/Rachit0910d/CODSOFT.git" className="text-[#00d9ff] no-underline font-bold hover:underline">GitHub →</a>
+                <a href="https://portfolio-rachitsaini.vercel.app/" className="text-[#00d9ff] no-underline font-bold hover:underline">Live Demo →</a>
+                <a href="https://github.com/Rachit0910d/CODSOFT/tree/main/portfolio" className="text-[#00d9ff] no-underline font-bold hover:underline">GitHub →</a>
               </div>
             </div>
           </div>
@@ -40,7 +39,6 @@ export function Projects() {
                 This Landing Page, I just made to check my Designing Thinking.
                 In this Design, I didn't Use any Canva's Template to get the design, instead of i use my
                 knowledge to build this.
-                It is still not good for Mobile and iPad Screenview.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">HTML</span>
