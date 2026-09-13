@@ -12,8 +12,10 @@ export function Hero() {
             </h1>
             <p className="text-xl md:text-2xl text-[#a0a0a0] mb-8">MERN Stack Developer</p>
             <p className="text-[#a0a0a0] mb-8 max-w-[500px] mx-auto md:mx-0">
-              Crafting digital experiences with clean code, innovative solutions, and a passion for technology
-              that makes a difference.
+              I'm a CSE (AI & ML) student who enjoys turning ideas into things that actually work.
+
+              My current focus is on Data Structures & Algorithms, Full-Stack Development, and AI/ML. <br /> I spend a lot of time solving problems on LeetCode, building web applications with the MERN stack, and experimenting with AI/ML concepts to understand how things work beyond the theory. <br />
+              I've also worked on real-world projects, participated in Smart India Hackathon, completed a CODSOFT Web Development internship, and continuously build projects to sharpen my development skills.
             </p>
             <Link to="projects" spy={true} smooth={true} offset={0} duration={500} className="bg-gradient-to-tr from-[#00d9ff] to-[#ff6b6b] text-white py-4 px-8 no-underline rounded-[50px] font-bold inline-block transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
               View My Work

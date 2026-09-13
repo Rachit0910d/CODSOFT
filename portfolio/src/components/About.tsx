@@ -10,7 +10,7 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="text-lg text-[#a0a0a0] flex flex-col gap-4">
             <p>
-              I'm a passionate Frontend developer with building scalable web applications. I love turning
+              I'm a passionate MERN Stack developer with building scalable web applications. I love turning
               complex problems into simple, beautiful, and intuitive solutions.
             </p>
             <p>
@@ -25,7 +25,7 @@ export function About() {
           </div>
           <div className="grid grid-cols-2 gap-8">
             <div className="text-center p-8 bg-[#1a1a1a] rounded-[10px] border border-[#333]">
-              <div className="text-4xl font-bold text-[#00d9ff] mb-2">2+</div>
+              <div className="text-4xl font-bold text-[#00d9ff] mb-2">4+</div>
               <div>Projects Completed</div>
             </div>
             <div className="text-center p-8 bg-[#1a1a1a] rounded-[10px] border border-[#333]">

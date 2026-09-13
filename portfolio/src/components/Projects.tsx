@@ -1,55 +1,85 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { projects } from "../utils/ProjectDetails.ts";
 
 export function Projects() {
   const scrollRef = useScrollAnimation();
 
   return (
-    <section id="projects" className="py-20 border-b border-[#333] relative z-[5]" ref={scrollRef}>
-      <div className="max-w-[1200px] mx-auto px-8 relative z-[6]">
-        <h2 className="text-4xl md:text-5xl text-center mb-12 text-[#00d9ff] font-bold">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-[#1a1a1a] rounded-[10px] overflow-hidden border border-[#333] floating-card" style={{ animationDelay: '0s' }}>
-            <div className="h-[200px] bg-gradient-to-tr from-[#00d9ff] to-[#ff6b6b] flex items-center justify-center text-5xl text-white">
-              📱
-            </div>
-            <div className="p-8">
-              <h3 className="text-2xl mb-4 text-[#00d9ff] font-bold">Personal Portfolio Website</h3>
-              <p className="text-[#a0a0a0] mb-6">
-                This is my digital resume, that is fully responsive and litle bit of animations which shows
-                my skills in Creative Thinking and Cool Designing.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">ReactTS</span>
-                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">TailwindCSS</span>
-              </div>
-              <div className="flex gap-4">
-                <a href="https://portfolio-rachitsaini.vercel.app/" className="text-[#00d9ff] no-underline font-bold hover:underline">Live Demo →</a>
-                <a href="https://github.com/Rachit0910d/CODSOFT/tree/main/portfolio" className="text-[#00d9ff] no-underline font-bold hover:underline">GitHub →</a>
-              </div>
-            </div>
-          </div>
+    <section
+      id="projects"
+      className="py-20 border-b border-border-color relative z-5"
+      ref={scrollRef}
+    >
+      <div className="max-w-300 mx-auto px-8 relative z-6">
 
-          <div className="bg-[#1a1a1a] rounded-[10px] overflow-hidden border border-[#333] floating-card" style={{ animationDelay: '0.5s' }}>
-            <div className="h-[200px] bg-gradient-to-tr from-[#00d9ff] to-[#ff6b6b] flex items-center justify-center text-5xl text-white">
-              📊
-            </div>
-            <div className="p-8">
-              <h3 className="text-2xl mb-4 text-[#00d9ff] font-bold">Landing Page</h3>
-              <p className="text-[#a0a0a0] mb-6">
-                This Landing Page, I just made to check my Designing Thinking.
-                In this Design, I didn't Use any Canva's Template to get the design, instead of i use my
-                knowledge to build this.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">HTML</span>
-                <span className="bg-[#000000] py-1 px-3 rounded-[15px] text-xs text-[#00d9ff]">CSS</span>
+        <h2 className="text-4xl md:text-5xl text-center mb-12 text-primary font-bold">
+          Featured Projects
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className="bg-card-bg rounded-[10px] overflow-hidden border border-border-color floating-card"
+              style={{ animationDelay: project.animationDelay }}
+            >
+
+              <div
+                className={`flex items-center justify-center`}
+              >
+                <img className="h-60 w-138" src={project.image} alt="Images of project" />
               </div>
-              <div className="flex gap-4">
-                <a href="https://codsoft-4py1.vercel.app/" className="text-[#00d9ff] no-underline font-bold hover:underline">Live Demo →</a>
-                <a href="https://github.com/Rachit0910d/CODSOFT/tree/main/Landing-Page" className="text-[#00d9ff] no-underline font-bold hover:underline">GitHub →</a>
+
+              <div className="p-8">
+
+                <h3 className="text-2xl mb-4 text-primary font-bold">
+                  {project.title}
+                </h3>
+
+                <p className="text-text-gray mb-6">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+
+                  {project.technologies.map((tech, techIdx) => (
+                    <span
+                      key={techIdx}
+                      className="bg-bg-darker py-1 px-3 rounded-[15px] text-xs text-primary"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+
+                </div>
+
+                <div className="flex gap-4">
+
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary no-underline font-bold hover:underline"
+                  >
+                    Live Demo →
+                  </a>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary no-underline font-bold hover:underline"
+                  >
+                    GitHub →
+                  </a>
+
+                </div>
+
               </div>
             </div>
-          </div>
+          ))}
+
         </div>
       </div>
     </section>

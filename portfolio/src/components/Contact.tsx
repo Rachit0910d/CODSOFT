@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { contactMethods } from '../utils/Data';
 
 export function Contact() {
   const scrollRef = useScrollAnimation();
@@ -13,18 +14,15 @@ export function Contact() {
             Let's discuss how we can bring your ideas to life!
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-8 mt-8">
-            <a href="mailto:rachit.rrr2005@gmail.com" className="bg-[#1a1a1a] p-6 rounded-[10px] text-white no-underline border border-[#333] transition-all duration-300 hover:-translate-y-1 hover:text-[#00d9ff] text-xl">
-              📧 Email
-            </a>
-            <a href="https://linkedin.com/in/rachit-saini-61638b318" target="_blank" rel="noopener noreferrer" className="bg-[#1a1a1a] p-6 rounded-[10px] text-white no-underline border border-[#333] transition-all duration-300 hover:-translate-y-1 hover:text-[#00d9ff] text-xl">
-              💼 LinkedIn
-            </a>
-            <a href="https://github.com/Rachit0910d" target="_blank" rel="noopener noreferrer" className="bg-[#1a1a1a] p-6 rounded-[10px] text-white no-underline border border-[#333] transition-all duration-300 hover:-translate-y-1 hover:text-[#00d9ff] text-xl">
-              🐙 GitHub
-            </a>
-            <a href="tel:+9289906392" className="bg-[#1a1a1a] p-6 rounded-[10px] text-white no-underline border border-[#333] transition-all duration-300 hover:-translate-y-1 hover:text-[#00d9ff] text-xl">
-              📱 Phone
-            </a>
+            {contactMethods.map((method, idx) => {
+              return (
+                <a key={idx} href={method.link} style={{ animationDelay: method.delay }} className="bg-[#1a1a1a] flex flex-col pt-8 border border-[#333] items-center  h-40 px-10 rounded-[10px] transition-all duration-300 hover:-translate-y-2 hover:text-[#00d9ff]">
+                  <img className='h-10 mb-4 rounded-full' src={method.logo} alt="logo" />
+                  <h4>{method.title}</h4>
+                </a>
+              )
+            })}
+
           </div>
         </div>
       </div>
