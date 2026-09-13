@@ -27,7 +27,7 @@ export function Navbar() {
         <div className="text-2xl font-bold text-[#00d9ff]">&lt;Rachit Saini&gt;</div>
         <ul className="hidden md:flex list-none gap-8">
           {
-            navbarLinks.map((navbarLink: string, idx: number) => {
+            navbarLinks.map((navbarLink: string, _idx: number) => {
               return (
                 <li><Link to={navbarLink} spy={true} smooth={true} offset={0} duration={500} className="text-white no-underline transition-colors hover:text-[#00d9ff] cursor-pointer">{navbarLink}</Link></li>
 
